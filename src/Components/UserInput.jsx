@@ -25,7 +25,11 @@ export default class UserInput extends React.Component {
             .then(res => {
                 console.log(res);
                 console.log(res.data);
+            })
+            .catch(error => {
+                console.log("Error with registration information")
             });
+            
     };
 
     render() {

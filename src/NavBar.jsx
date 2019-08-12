@@ -9,6 +9,7 @@ import { AppBar, Toolbar } from '@material-ui/core'
 export const NavBar = ({ color }) => (
     <AppBar color={color}>
         <Toolbar>
+            <h1>Habit Tracker</h1>
             <Link to="/">
                 <Button>Home</Button>
             </Link>

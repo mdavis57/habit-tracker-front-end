@@ -5,9 +5,8 @@ import UserInput from '../Components/UserInput'
 export default () => {
   return (
     <div>
-      <h1>Register</h1>
-  
-      <div>
+      <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Register</h1>
+      <div style={{display: 'flex', justifyContent:'center', height: '100vh'}}>
         <UserInput />
       </div>
     </div>
