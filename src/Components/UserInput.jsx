@@ -3,24 +3,25 @@ import axios from 'axios';
 
 
 export default class UserInput extends React.Component {
-    state = {
-        name: '',
-    };
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            email: '',
+            username: '',
+            password: ''
+        }
+    }
 
     handleChange = event => {
-        this.setState({ name: event.target.value });
+        this.setState({ [event.target.name]: event.target.value });
     };
 
     handleSubmit = event => {
         
         event.preventDefault();
-
-        const user = {
-            name: this.state.name,
-        };
-        
         axios
-            .post('https://localhost:8080/user/new', { user })
+            .post('http://localhost:8080/user/new', this.state)
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -28,13 +29,37 @@ export default class UserInput extends React.Component {
     };
 
     render() {
+        const { email, username, password } = this.state
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" name="name" onChange={this.handleChange}/>
-                </label>
-                <button type="submit">Add</button>
+                <div>
+                    <label>
+                        Email:
+                        <input type="text" name="email" value={email} onChange={this.handleChange}/>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Username:
+                        <input type="text" name="username" value={username}  onChange={this.handleChange}/>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Password:
+                        <input type="password" name="password" value={password} onChange={this.handleChange}/>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Verify Password:
+                        <input type="password" name="verifypassword" />
+                    </label>
+                </div>
+    
+                <div>
+                    <button type="submit">Register</button>
+                </div>
             </form>
            
         )

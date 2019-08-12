@@ -10,10 +10,10 @@ export const NavBar = ({ color }) => (
     <AppBar color={color}>
         <Toolbar>
             <Link to="/">
-                <Button>Page One</Button>
+                <Button>Home</Button>
             </Link>
             <Link to="/page2">
-                <Button>Page Two</Button>
+                <Button>Register</Button>
             </Link>
             <Link to="/page3">
                 <Button>Page Three</Button>
