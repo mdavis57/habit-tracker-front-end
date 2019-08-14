@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+habit-tracker
 
-## Available Scripts
+Overview
 
-In the project directory, you can run:
+My project will be a habit tracker which will enable users to track their progress with habits they wish to start or break. Users will be able to create their own sub-categories for better organization, as well as create personal incentives upfront for when they reach their chosen milestones. The application will have capability for personal journal entries with optional prompts to keep the user engaged and in tune with their thoughts along the way, for better self reflection. Users will be able to review their progress through data and visual representation, and reviewing past journal entries.
 
-### `npm start`
+The inspiration for this project came from my boyfriend; he is an incredibly goal oriented person striving to be his best self. This app is for him and anyone striving to better themselves. This habit tracking application will be an excellent tool to help the user gain the organization and motivation necessary to work toward their personal goals.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Features
 
-### `npm test`
+Sign up/Login- Users can create their own personal account with chosen username and password. They will be able to log in and out of their account. Data will be salted and hashed for security.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create and edit habits- Users can create/edit custom habits they want to begin tracking.
 
-### `npm run build`
+Subcategories- Users can create their own subcategories to put habits in for better organization (Ex: health, financial, etc…)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Free Days- Users will have the option to set up predetermined "free days" (Ex: every Saturday the User is free to 'break' their habit of no fast food, without it effecting their progress)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Incentives- Users will have the ability to set up predetermined incentives for when they reach chosen milestones.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Log daily progress- Users will be able to mark "complete" or "incomplete" for each of their personal habits daily to track their progress.
 
-### `npm run eject`
+Journal- Users will be able to use the journal functionality to log any thoughts they have along the way, and revisit these later. There will be optional prompts they can choose from, or they can write on a blank note.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Dashboard- shows progress through data, graphs and other visual representations.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Technologies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Java
 
-## Learn More
+Spring Boot
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ReactJS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+mySQL
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Bootstrap
