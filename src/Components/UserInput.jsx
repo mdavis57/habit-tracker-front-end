@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 
+
 export default class UserInput extends React.Component {
     constructor(props) {
         super(props)
@@ -45,19 +46,13 @@ export default class UserInput extends React.Component {
                 <div>
                     <label>
                         Username:
-                        <input type="text" name="username" value={username}  onChange={this.handleChange}/>
+                        <input type="username" name="username" value={username}  onChange={this.handleChange}/>
                     </label>
                 </div>
                 <div>
                     <label>
                         Password:
                         <input type="password" name="password" value={password} onChange={this.handleChange}/>
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Verify Password:
-                        <input type="password" name="verifypassword" />
                     </label>
                 </div>
     
