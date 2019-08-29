@@ -22,7 +22,7 @@ export default class UserInput extends React.Component {
         
         event.preventDefault();
         axios
-            .post('http://localhost:8080/user/new', this.state)
+            .post('http://localhost:8080/user/signup', this.state)
             .then(res => {
                 console.log(res);
                 console.log(res.data);
