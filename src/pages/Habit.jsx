@@ -5,7 +5,7 @@ import UserList from '../Components/UserList';
 export default () => {
   return (
     <div>
-      <h1>Page 2</h1>
+      <h1>Individual habit</h1>
       
     </div>
   )

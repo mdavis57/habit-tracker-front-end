@@ -1,9 +1,10 @@
-import React from 'react';
+import React from 'react'
+import UserInput from '../Components/UserInput'
 import axios from 'axios';
 
 
 
-export default class UserInput extends React.Component {
+export default class User extends React.Component {
     constructor(props) {
         super(props)
 
@@ -21,7 +22,7 @@ export default class UserInput extends React.Component {
         
         event.preventDefault();
         axios
-            .post('http://localhost:8080/user/signup', this.state)
+            .post('http://localhost:8080/signup', this.state)
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -57,3 +58,14 @@ export default class UserInput extends React.Component {
         )
     }
 }
+
+//export default () => {
+ // return (
+ //   <div>
+ //     <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Register</h1>
+  //    <div style={{display: 'flex', justifyContent:'center', height: '100vh'}}>
+  //      <UserInput />
+  //    </div>
+  //  </div>
+ // )
+//}

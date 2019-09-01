@@ -13,11 +13,11 @@ export const NavBar = ({ color }) => (
             <Link to="/">
                 <Button>Home</Button>
             </Link>
-            <Link to="/page2">
+            <Link to="/SignUp">
                 <Button>Register</Button>
             </Link>
-            <Link to="/page3">
-                <Button>Page Three</Button>
+            <Link to="/Login">
+                <Button>Login</Button>
             </Link>
             <Link to="/page4">
                 <Button>Page Four</Button>

@@ -1,9 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Page1 from './pages/page1'
-import Page2 from './pages/page2'
-import Page3 from './pages/page3'
-import Page4 from './pages/page4'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
+import Home from './pages/Home'
+import Habit from './pages/Habit'
+import Habits from './pages/Habits'
+import Categories from './pages/Categories'
 import Layout from './Layout'
 
 export const Routes = () => {
@@ -11,10 +13,12 @@ export const Routes = () => {
         <Router>
             <Layout>
                 <div style={{ marginTop: '100px' }}>
-                    <Route path="/" exact component={Page1} />
-                    <Route path="/page2" exact component={Page2} />
-                    <Route path="/page3" exact component={Page3} />
-                    <Route path="/page4" exact component={Page4} />
+                    <Route path="/login" exact component={Login} />
+                    <Route path="/signUp" exact component={SignUp} />
+                    <Route path="/" exact component={Home} />
+                    <Route path="/habits" exact component={Habits} />
+                    <Route path="/habit/:id" exact component={Habit} />
+                    <Route path="/categories" exact component={Categories} />
                 </div>
             </Layout>
         </Router>
