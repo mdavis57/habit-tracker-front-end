@@ -1,13 +1,14 @@
-import React from 'react'
-import UserList from '../Components/UserList';
+import React from 'react';
+import { tsConstructorType } from '@babel/types';
 
 
 export default () => {
   return (
     <div>
-      <h1>Individual habit</h1>
+      <h1>Individual Habit</h1>
       
     </div>
   )
     
 }
+

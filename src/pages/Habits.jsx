@@ -1,13 +1,18 @@
 import React from 'react'
-import UserList from '../Components/UserList';
+import Auth from '../components/Auth';
 
 
-export default () => {
-  return (
-    <div>
-      <h1>Habits</h1>
-      
-    </div>
-  )
-    
+
+class Habit extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Habits</h1>
+        
+      </div>
+    );
+  } 
 }
+
+
+export default Auth(Habit) 
