@@ -36,6 +36,7 @@ export default class User extends React.Component {
         const { userName, password } = this.state
         return (
             <form onSubmit={this.handleSubmit}>
+                <h1>Register</h1>
                 <div>
                     <label>
                         Username:
@@ -51,6 +52,9 @@ export default class User extends React.Component {
     
                 <div>
                     <button type="submit">Register</button>
+                </div>
+                <div>
+                    <a href="/login">Already have an account? Login</a>
                 </div>
             </form>
            

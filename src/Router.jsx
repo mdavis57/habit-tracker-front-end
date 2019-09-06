@@ -5,7 +5,7 @@ import SignUp from './pages/SignUp'
 import Home from './pages/Home'
 import Habit from './pages/Habit'
 import Habits from './pages/Habits'
-import Categories from './pages/Categories'
+import Dashboard from './pages/Dashboard'
 import Layout from './Layout'
 
 export const Routes = () => {
@@ -18,7 +18,7 @@ export const Routes = () => {
                     <Route path="/" exact component={Home} />
                     <Route path="/habits" exact component={Habits} />
                     <Route path="/habit/:id" exact component={Habit} />
-                    <Route path="/categories" exact component={Categories} />
+                    <Route path="/dashboard" exact component={Dashboard} />
                 </div>
             </Layout>
         </Router>
