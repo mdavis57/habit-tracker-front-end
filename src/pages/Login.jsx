@@ -1,56 +1,53 @@
 import React from 'react'
-import axios from 'axios';
+import axios from 'axios'
+import Auth from '../components/Auth';
+
 
 export default class Login extends React.Component {
-  constructor(props) {
+    constructor(props) {
       super(props)
-
-      this.state = {
-          userName: '',
-          password: '',
-      }
-  }
-
-  handleChange = event => {
-      this.setState({ [event.target.name]: event.target.value });
-  };
-
-  handleSubmit = event => {
-      
-      event.preventDefault();
-      axios
-          .post('http://localhost:8080/login', this.state)
-          .then(res => {
-              console.log(res);
-              console.log(res.data);
-          })
-          .catch(error => {
-              console.log("Error with login information")
-          });
-          
-          
-  };
+  
+      this.state = { userName: '', password: '' }
+  
+      this.handleChange = this.handleChange.bind(this)
+      this.handleLogin = this.handleLogin.bind(this)
+    }
+  
+    async handleLogin(e) {
+      e.preventDefault()
+      const response = await axios.post(`http://localhost:8080/login`, {
+        userName: this.state.userName,
+        password: this.state.password,
+      })
+      window.localStorage.setItem('auth', response.headers.authorization)
+      let path = '/dashboard'
+      this.props.history.push(path)
+    }
+  
+    handleChange(e) {
+      this.setState({ [e.target.name]: e.target.value })
+    }
+  
 
   render() {
-      const { userName, password } = this.state
       return (
-          <form onSubmit={this.handleSubmit}>
+          <form>
             <h1>Login</h1>
               <div>
                   <label>
                       Username:
-                      <input type="userName" name="userName" value={userName}  onChange={this.handleChange}/>
+                      <input type="text" name="userName"  onChange={this.handleChange}/>
                   </label>
               </div>
               <div>
                   <label>
                       Password:
-                      <input type="password" name="password" value={password} onChange={this.handleChange}/>
+                      <input type="password" name="password"  onChange={this.handleChange}/>
                   </label>
               </div>
   
               <div>
-                  <button type="submit">Login</button>
+                  <button onClick={this.handleLogin} type="submit">Login</button>
               </div>
               <div>
                   <a href="/register">Don't have an account? Register</a>

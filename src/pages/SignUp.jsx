@@ -5,53 +5,54 @@ import axios from 'axios';
 
 export default class User extends React.Component {
     constructor(props) {
-        super(props)
-
-        this.state = {
-            userName: '',
-            password: '',
-        }
+      super(props)
+      this.state = {
+        userName: '',
+        password: '',
+      }
+  
+      this.handleSubmit = this.handleSubmit.bind(this)
+      this.handleChange = this.handleChange.bind(this)
+    }
+  
+    async handleSubmit(e) {
+      e.preventDefault()
+      await axios.post(`http://localhost:8080/signup`, {
+        userName: this.state.userName,
+        password: this.state.password,
+      })
+      let path = '/login'
+      this.props.history.push(path)
+    }
+    handleChange(e) {
+      this.setState({ [e.target.name]: e.target.value })
     }
 
-    handleChange = event => {
-        this.setState({ [event.target.name]: event.target.value });
-    };
-
-    handleSubmit = event => {
-        
-        event.preventDefault();
-        axios
-            .post('http://localhost:8080/signup', this.state)
-            .then(res => {
-                console.log(res);
-                console.log(res.data);
-            })
-            .catch(error => {
-                console.log("Error with registration information")
-            });
-            
-    };
-
     render() {
-        const { userName, password } = this.state
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form>
                 <h1>Register</h1>
                 <div>
                     <label>
                         Username:
-                        <input type="userName" name="userName" value={userName}  onChange={this.handleChange}/>
+                        <input type="text" name="userName"   onChange={this.handleChange}/>
                     </label>
                 </div>
                 <div>
                     <label>
                         Password:
-                        <input type="password" name="password" value={password} onChange={this.handleChange}/>
+                        <input type="password" name="password"  onChange={this.handleChange}/>
                     </label>
                 </div>
-    
                 <div>
-                    <button type="submit">Register</button>
+                    <label>
+                        Verify Password:
+                        <input type="password" name="password"  onChange={this.handleChange}/>
+                    </label>
+                </div>
+        
+                <div>
+                    <button onClick={this.handleSubmit} type="submit">Register</button>
                 </div>
                 <div>
                     <a href="/login">Already have an account? Login</a>
