@@ -13,8 +13,13 @@ class Dashboard extends React.Component {
         <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
           <Button variant="primary" href="/newhabit">Add new habit</Button>
         </div>
-
-        
+        <div>
+          <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>My Habits</h1>
+          <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
+            <HabitList />
+          </div>
+          
+        </div>
         
       </div>
     );

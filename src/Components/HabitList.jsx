@@ -3,20 +3,23 @@ import axios from 'axios';
 
 
 export default class HabitList extends React.Component {
-    state = {
-        habits: [],
+    constructor() {
+        super()
+        this.state = {
+            habits: []
+            
+    }
     };
 
-    componentDidMount() {
-        axios.get('http://localhost:8080/habits').then(res => {
-            const habits = res.data
-            this.setState({ habits })
-        });
+
+    async componentDidMount() {
+        const data = await axios.get('http://localhost:8080/user/id/habits', {
+            headers: { authorization: window.localStorage.getItem('auth') }
+        })
+        this.setState({ habits : data.data})
+    
     }
     render() {
-        const names = this.state.habits.name
-        ? this.state.habits.name.split(',')
-        : [];
         return (
             <ul>
                 {this.state.habits.map(habit  => 
