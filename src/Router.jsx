@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import Home from './pages/Home'
-import Habit from './pages/Habit'
-import Habits from './pages/Habits'
 import Dashboard from './pages/Dashboard'
+import NewHabit from './pages/NewHabit'
 import Layout from './Layout'
 
 export const Routes = () => {
@@ -16,9 +15,8 @@ export const Routes = () => {
                     <Route path="/login" exact component={Login} />
                     <Route path="/signUp" exact component={SignUp} />
                     <Route path="/" exact component={Home} />
-                    <Route path="/habits" exact component={Habits} />
-                    <Route path="/habit/:id" exact component={Habit} />
                     <Route path="/dashboard" exact component={Dashboard} />
+                    <Route path="/newhabit" exact component={NewHabit} />
                 </div>
             </Layout>
         </Router>

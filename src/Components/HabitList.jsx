@@ -8,12 +8,15 @@ export default class HabitList extends React.Component {
     };
 
     componentDidMount() {
-        axios.get('http://localhost:8080/user/id/habits').then(res => {
-            console.log(res);
-            this.setState({ habits: res.data })
+        axios.get('http://localhost:8080/habits').then(res => {
+            const habits = res.data
+            this.setState({ habits })
         });
     }
     render() {
+        const names = this.state.habits.name
+        ? this.state.habits.name.split(',')
+        : [];
         return (
             <ul>
                 {this.state.habits.map(habit  => 

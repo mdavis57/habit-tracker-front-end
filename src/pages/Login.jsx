@@ -50,7 +50,7 @@ export default class Login extends React.Component {
                   <button onClick={this.handleLogin} type="submit">Login</button>
               </div>
               <div>
-                  <a href="/register">Don't have an account? Register</a>
+                  <a href="/signup">Don't have an account? Register</a>
               </div>
           </form>
          
