@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import Auth from '../components/Auth';
 
 
 export default class Login extends React.Component {
