@@ -18,4 +18,7 @@ export default Component => props => {
   } else if (!loggedIn) {
     return <Redirect to="/login" />
   }
+
+  
+  
 }

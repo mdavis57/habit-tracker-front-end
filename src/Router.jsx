@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard'
 import NewHabit from './pages/NewHabit'
 import Layout from './Layout'
 
+
 export const Routes = () => {
     return (
         <Router>
@@ -17,6 +18,8 @@ export const Routes = () => {
                     <Route path="/" exact component={Home} />
                     <Route path="/dashboard" exact component={Dashboard} />
                     <Route path="/newhabit" exact component={NewHabit} />
+                    
+                    
                 </div>
             </Layout>
         </Router>
