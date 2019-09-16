@@ -12,15 +12,7 @@ export const NavBar = ({ color }) => (
     <AppBar color={color}>
         <Toolbar>
             <h1>Habit Tracker</h1>
-            <Link to="/">
-                <Button>Home</Button>
-            </Link>
-            <Link to="/SignUp">
-                <Button>Register</Button>
-            </Link>
-            <Link to="/Login">
-                <Button>Login</Button>
-            </Link>
+            
             
         
         </Toolbar>

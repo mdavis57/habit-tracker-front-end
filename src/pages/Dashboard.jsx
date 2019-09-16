@@ -7,21 +7,27 @@ import LogOut from '../components/LogOut';
 
 
 
+
+
 class Dashboard extends React.Component {
   render() {
     return (
       <div>
+        
         <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Dashboard</h1>
         <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
+          <Button variant="primary" href="/myhabits">My Habits</Button>
           <Button variant="primary" href="/newhabit">Add new habit</Button>
           <LogOut />
         </div>
         <div>
-          <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>My Habits</h1>
+          <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Log Progress</h1>
           <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
             <HabitList />
           </div>
         </div>
+        
+      
        
       </div>
     );

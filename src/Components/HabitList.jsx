@@ -23,7 +23,9 @@ export default class HabitList extends React.Component {
         return (
             <ul>
                 {this.state.habits.map(habit  => 
-                    <li key={habit.id}>{habit.name}</li>
+                    <li>{habit.name}</li>
+                    
+                    
                 )}
             </ul>
         );

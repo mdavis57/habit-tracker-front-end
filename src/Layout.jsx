@@ -6,4 +6,5 @@ export default ({ children }) => (
     <NavBar color={'secondary'} />
     {children}
   </>
-)
+) 
+

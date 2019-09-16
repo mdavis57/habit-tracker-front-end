@@ -38,6 +38,7 @@ class NewHabit extends React.Component {
     render() {
         return (
             <form>
+                <h1>Create new habit</h1>
                 <div>
                     <label>
                         Name:
