@@ -17,13 +17,12 @@ export default class HabitList extends React.Component {
             headers: { authorization: window.localStorage.getItem('auth') }
         })
         this.setState({ habits : data.data})
-    
     }
     render() {
         return (
             <ul>
                 {this.state.habits.map(habit  => 
-                    <li>{habit.name}</li>
+                    <li>{habit.name}<input type="checkbox"></input></li>
                     
                     
                 )}

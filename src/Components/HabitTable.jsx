@@ -20,26 +20,29 @@ export default class HabitTable extends React.Component {
     
     }
 
+    
     renderTableData() {
+        let streak = 0;
         return this.state.habits.map((habit) => {
             return (
                 <tr key={habit.id}>
-                    <td>{habit.id}</td>
+                    <td><input type="checkbox"></input></td>
                     <td>{habit.name}</td>
                     <td>{habit.description}</td>
+                    <td>{streak}</td>
                 </tr>
             )
         })
     }
 
+    
 
     render() {
         return (
             <div>
-                <h1 id='title'>Habits</h1>
                 <table id='habits'>
                     <tbody>
-                        <tr><td>ID</td><td>NAME</td><td>DESCRIPTION</td></tr>
+                        <tr><td>COMPLETED</td><td>NAME</td><td>DESCRIPTION</td><td>STREAK</td></tr>
                         {this.renderTableData()}
                     </tbody>
                 </table>
