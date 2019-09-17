@@ -1,6 +1,9 @@
 import React from 'react'
 import axios from 'axios';
 import Auth from '../components/Auth';
+import { Button } from '@material-ui/core'
+
+
 
 class NewHabit extends React.Component {
     constructor(props) {
@@ -31,6 +34,8 @@ class NewHabit extends React.Component {
       handleChange(e) {
         this.setState({ [e.target.name]: e.target.value })
       }
+
+     
     
      
     
@@ -51,9 +56,56 @@ class NewHabit extends React.Component {
                         <input type="text" name="description"  onChange={this.handleChange}/>
                     </label>
                 </div>
-    
                 <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
-                    <button onClick={this.handleSubmit} type="submit">Create Habit</button>
+                    <label>
+                       Repeats:
+                    </label>
+                </div>
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
+                    <label>
+                        Monday
+                        <input type="checkbox" />
+                    </label>
+                </div>
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
+                    <label>
+                        Tuesday
+                        <input type="checkbox" />
+                    </label>
+                </div>
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
+                    <label>
+                        Wednesday
+                        <input type="checkbox" />
+                    </label>
+                </div>
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
+                    <label>
+                        Thursday
+                        <input type="checkbox" />
+                    </label>
+                </div>
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
+                    <label>
+                        Friday
+                        <input type="checkbox" />
+                    </label>
+                </div>
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
+                    <label>
+                        Saturday
+                        <input type="checkbox" />
+                    </label>
+                </div>
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
+                    <label>
+                        Sunday
+                        <input type="checkbox" />
+                    </label>
+                </div>   
+                
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
+                    <Button variant="primary" onClick={this.handleSubmit} type="submit">Create Habit</Button>
                 </div>
             </form>
            

@@ -18,6 +18,8 @@ code {
   font-family: arial, sans-serif;
 }
 
+form label {font-weight:bold}
+
 #habits {
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

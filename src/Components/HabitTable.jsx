@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Button } from '@material-ui/core'
 
 
 export default class HabitTable extends React.Component {
@@ -50,7 +51,7 @@ export default class HabitTable extends React.Component {
                         {this.renderTableData()}
                     </tbody>
                 </table>
-                <button type="submit">Log progress</button>    
+                <Button variant="primary" type="submit">Log progress</Button>    
             </div>    
             
         );

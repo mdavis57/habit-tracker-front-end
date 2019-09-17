@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios';
+import { Button } from '@material-ui/core'
 
 
 
@@ -52,7 +53,7 @@ export default class User extends React.Component {
                 </div>
         
                 <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
-                    <button onClick={this.handleSubmit} type="submit">Register</button>
+                    <Button variant="primary" onClick={this.handleSubmit} type="submit">Register</Button>
                 </div>
                 <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                     <a href="/login">Already have an account? Login</a>
