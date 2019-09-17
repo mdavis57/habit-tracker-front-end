@@ -38,21 +38,21 @@ class NewHabit extends React.Component {
     render() {
         return (
             <form>
-                <h1>Create new habit</h1>
-                <div>
+                <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Create new habit</h1>
+                <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                     <label>
                         Name:
                         <input type="text" name="name"  onChange={this.handleChange}/>
                     </label>
                 </div>
-                <div>
+                <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                     <label>
                         Description:
                         <input type="text" name="description"  onChange={this.handleChange}/>
                     </label>
                 </div>
     
-                <div>
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
                     <button onClick={this.handleSubmit} type="submit">Create Habit</button>
                 </div>
             </form>

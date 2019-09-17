@@ -10,21 +10,21 @@ import HabitTable from '../components/HabitTable';
 
 
 
+
 class Dashboard extends React.Component {
   render() {
     return (
       <div>
         
-        <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Dashboard</h1>
         <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
           <Button variant="primary" href="/newhabit">Add new habit</Button>
           <LogOut />
         </div>
+        <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Dashboard</h1>
         <div>
-          <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Log Progress</h1>
-          <div>
-            <HabitTable />
-          </div>
+          
+          <HabitTable />
+          
         </div>
         
       

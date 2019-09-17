@@ -30,25 +30,25 @@ export default class Login extends React.Component {
 
   render() {
       return (
-          <form>
-            <h1>Login</h1>
-              <div>
+          <form >
+            <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Login</h1>
+              <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                   <label>
                       Username:
                       <input type="text" name="userName"  onChange={this.handleChange}/>
                   </label>
               </div>
-              <div>
+              <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                   <label>
                       Password:
                       <input type="password" name="password"  onChange={this.handleChange}/>
                   </label>
               </div>
   
-              <div>
+              <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
                   <button onClick={this.handleLogin} type="submit">Login</button>
               </div>
-              <div>
+              <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                   <a href="/signup">Don't have an account? Register</a>
               </div>
           </form>

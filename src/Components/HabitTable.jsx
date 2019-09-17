@@ -6,7 +6,9 @@ export default class HabitTable extends React.Component {
     constructor() {
         super()
         this.state = {
-            habits: []
+            habits: [],
+            
+            
             
     }
     };
@@ -19,18 +21,20 @@ export default class HabitTable extends React.Component {
         this.setState({ habits : data.data})
     
     }
-
+    
     
     renderTableData() {
-        let streak = 0;
         return this.state.habits.map((habit) => {
+            let streak = 0;
             return (
+                
                 <tr key={habit.id}>
                     <td><input type="checkbox"></input></td>
                     <td>{habit.name}</td>
                     <td>{habit.description}</td>
                     <td>{streak}</td>
                 </tr>
+                   
             )
         })
     }
@@ -46,6 +50,7 @@ export default class HabitTable extends React.Component {
                         {this.renderTableData()}
                     </tbody>
                 </table>
+                <button type="submit">Log progress</button>    
             </div>    
             
         );

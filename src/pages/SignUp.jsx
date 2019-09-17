@@ -31,30 +31,30 @@ export default class User extends React.Component {
     render() {
         return (
             <form>
-                <h1>Register</h1>
-                <div>
-                    <label>
+                <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Register</h1>
+                <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
+                    <label >
                         Username:
                         <input type="text" name="userName"   onChange={this.handleChange}/>
                     </label>
                 </div>
-                <div>
+                <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                     <label>
                         Password:
                         <input type="password" name="password"  onChange={this.handleChange}/>
                     </label>
                 </div>
-                <div>
+                <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                     <label>
                         Verify Password:
                         <input type="password" name="password"  onChange={this.handleChange}/>
                     </label>
                 </div>
         
-                <div>
+                <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
                     <button onClick={this.handleSubmit} type="submit">Register</button>
                 </div>
-                <div>
+                <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                     <a href="/login">Already have an account? Login</a>
                 </div>
             </form>
