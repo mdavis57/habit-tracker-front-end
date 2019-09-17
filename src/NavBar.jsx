@@ -21,6 +21,9 @@ export const NavBar = ({ color }) => (
             <Link to="/newhabit">
                 <Button>Create new habit</Button>
             </Link>
+            <Link to="/newblog">
+                <Button>Create new blog</Button>
+            </Link>
           
             
             

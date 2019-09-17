@@ -17,7 +17,6 @@ class Dashboard extends React.Component {
       <div>
         
         <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
-          <Button variant="primary" href="/newhabit">Add new habit</Button>
           <LogOut />
         </div>
         <h1 style={{display: 'flex', justifyContent:'center', height: '5vh'}}>Dashboard</h1>

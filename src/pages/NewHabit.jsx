@@ -53,7 +53,7 @@ class NewHabit extends React.Component {
                 <div style={{display: 'flex', justifyContent:'center', height: '5vh'}}>
                     <label>
                         Description:
-                        <input type="text" name="description"  onChange={this.handleChange}/>
+                        <input type="text" size='50' name="description"  onChange={this.handleChange}/>
                     </label>
                 </div>
                 <div style={{display: 'flex', justifyContent:'center', height: '3vh'}}>
@@ -114,3 +114,6 @@ class NewHabit extends React.Component {
 }
 
 export default Auth(NewHabit)
+
+
+//  <textarea rows="4" cols="50" name= 'description' onChange={this.handleChange}></textarea>

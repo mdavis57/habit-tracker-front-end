@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import NewHabit from './pages/NewHabit'
 import Layout from './Layout'
+import NewBlog from './pages/NewBlog'
 
 
 
@@ -19,7 +20,7 @@ export const Routes = () => {
                     <Route path="/" exact component={Home} />
                     <Route path="/dashboard" exact component={Dashboard} />
                     <Route path="/newhabit" exact component={NewHabit} />
-                    
+                    <Route path="/newblog" exact component={NewBlog} />
                     
                 </div>
             </Layout>
